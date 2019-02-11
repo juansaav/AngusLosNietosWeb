@@ -320,8 +320,11 @@ jQuery(document).ready(function($) {
 
 			if ( st > 100 ) {
 				navbar.addClass('scrolled');
+				document.getElementById("idLogo").style.visibility = "hidden";
 			} else {
 				navbar.removeClass('scrolled');
+				document.getElementById("idLogo").style.visibility = "visible";
+				document.getElementById("idLogo").src = "images/IconoAngusLosNietos.png";
 			}
 			
 		})
