@@ -33,7 +33,9 @@ app.controller('NovedadesController', function($scope,$location) {
 		novId = novMatch[1];
     	$scope.showNovedad = true;
     	$scope.novedades = [$scope.novedades[novId]];
-    	document.getElementById("menuBar").style.backgroundColor  = "black";
+	  	var element = document.getElementById("navBar");
+	  	element.classList.remove("js-site-navbar");
+	  	element.classList.add("scrolled");
     }
    }
    $scope.init();
