@@ -4,9 +4,9 @@ app.controller('NovedadesController', function($scope,$location) {
 	{
 		id:1,
 		imageUrl : "images/img_1.jpg",
-		title: "Novedad 1",
-		date: "20/10/2018",
-		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores culpa qui aliquam placeat nobis veritatis tempora natus rerum obcaecati."
+		title: "World Angus Secretariat",
+		date: "14/2/2019",
+		description: "Ya falta menos para el World Angus Secretariat, no se lo pierda!!!"
 	},
 	{
 		id:2,

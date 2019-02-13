@@ -3,7 +3,7 @@ app.controller('GeneticaController', function($scope,$location) {
   $scope.toros = [
 	{
 		id:1,
-		imageUrl : "images/toro.jpg",
+		imageUrl : "images/hero_1.jpg",
 		name: "Campeón 1",
 		type: "pedigree",
 		genetic_type: "semen",
@@ -12,7 +12,7 @@ app.controller('GeneticaController', function($scope,$location) {
 	},
 	{
 		id:2,
-		imageUrl : "images/toro11.jpg",
+		imageUrl : "images/cabana11.jpg",
 		name: "Campeón 2",
 		type: "general",
 		genetic_type: "semen",
