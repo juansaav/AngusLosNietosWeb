@@ -19,9 +19,9 @@ h1, h2, h3, h4, h5,
   color: #000; }
 
 .image-catalogue {
-    width: 291px;
+    width: 321px;
     height: 291px;
-    object-fit: cover;
+    /*object-fit: cover;*/
 }
 a {
   -webkit-transition: .3s all ease;
