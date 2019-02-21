@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
-app.controller('GeneticaController', function($scope,$location) {
-  $scope.toros = [
+app.controller('TorosController', function($scope,$location) {
+  $scope.torosGenetica = [
 	{
 		id:1,
 		imageUrl : "images/hero_1.jpg",
@@ -110,6 +110,73 @@ app.controller('GeneticaController', function($scope,$location) {
 		pdfUrl: "pdf/lorem-ipsum.pdf"	
 	}
   ];
+  
+  $scope.torosPremio = [
+  	{
+  		id:1,
+		imageUrl : "images/campeon6.jpg",
+		name: "Campeón Dos años menor y Reservado Gran Campeón",
+		place: "Expo Prado",
+		year: 2018
+  	},
+  	{
+  		id:2,
+		imageUrl : "images/campeon8.jpg",
+		name: "Reservada Vaquillona Menor",
+		place: "Expo Prado",
+		year: 2018
+  	},
+  	{
+  		id:3,
+		imageUrl : "images/campeon4.jpg",
+		name: "CCampeón Junior",
+		place: "Expo Prado",
+		year: 2018
+  	},
+  	{
+  		id:4,
+		imageUrl : "images/campeon1.jpg",
+		name: "Campeona Vaca Joven y Reservada",
+		place: "Expo Durazno",
+		year: 2018
+  	},
+  	{
+  		id:5,
+		imageUrl : "images/campeon9.jpg",
+		name: "Campeona Vaquillona Menor",
+		place: "Expo Durazno",
+		year: 2018
+  	},
+  	{
+  		id:6,
+		imageUrl : "images/campeon2.jpg",
+		name: "Campeona Junior",
+		place: "Expo Prado",
+		year: 2017
+  	},
+  	{
+  		id:7,
+		imageUrl : "images/campeon5.jpg",
+		name: "Tercer Mejor Ternero Menor",
+		place: "Expo Prado",
+		year: 2017
+  	},
+  	{
+  		id:8,
+		imageUrl : "images/campeon7.jpg",
+		name: "Tercer Mejor Ternera Menor",
+		place: "Expo Prado",
+		year: 2017
+  	},
+  	{
+  		id:9,
+		imageUrl : "images/campeon3.jpg",
+		name: "Campeona Junior",
+		place: "Expo Durazno",
+		year: 2017
+  	}	
+
+  ];
   	$scope.showGeneral = function (obj) {
     	return obj.type === "general";
 	};
@@ -123,5 +190,4 @@ app.controller('GeneticaController', function($scope,$location) {
         return obj.genetic_type === "reproductor";
 	};
 
-  
 });

@@ -26,10 +26,10 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/angular-min.js"></script>
-    <script type="text/javascript" src = "controllers/genetica.js"></script>
+    <script type="text/javascript" src = "controllers/toros.js"></script>
     
   </head>
-  <body ng-app = "myApp" ng-controller = "GeneticaController">
+  <body ng-app = "myApp" ng-controller = "TorosController">
   
   <div class="site-wrap">
 
@@ -123,7 +123,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5" ng-repeat="toro in toros" ng-show="showSemen(toro) && showGeneral(toro)">
+          <div class="col-md-6 col-lg-4 mb-5" ng-repeat="toro in torosGenetica" ng-show="showSemen(toro) && showGeneral(toro)">
             <div class="hotel-room text-center">
               <a href="{{toro.pdfUrl}}" class="d-block mb-0 thumbnail" target="_blank"><img src="{{toro.imageUrl}}" alt="Image" class="image-catalogue"></a>
               <div class="hotel-room-body">
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5" ng-repeat="toro in toros" ng-show="showSemen(toro) && showPedigree(toro)">
+          <div class="col-md-6 col-lg-4 mb-5" ng-repeat="toro in torosGenetica" ng-show="showSemen(toro) && showPedigree(toro)">
             <div class="hotel-room text-center">
               <a href="{{toro.pdfUrl}}" class="d-block mb-0 thumbnail" target="_blank"><img src="{{toro.imageUrl}}" alt="Image" class="image-catalogue"></a>
               <div class="hotel-room-body">

@@ -25,9 +25,11 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular-min.js"></script>
+    <script src = "controllers/toros.js"></script>
     
   </head>
-  <body>
+  <body ng-app = "myApp">
   
   <div class="site-wrap">
 
@@ -277,7 +279,7 @@
 
 
     
-      <div class="site-section bg-light">
+      <div class="site-section bg-light" ng-controller = "TorosController">
       <div class="container">
         <div class="row">
           <div class="col-md-6 mx-auto text-center mb-5 section-heading">
@@ -285,84 +287,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5">
+          <div class="col-md-6 col-lg-4 mb-5" ng-repeat="premio in torosPremio | orderBy:['-year','-place']">
             <div class="hotel-room text-center">
-              <a href="images/campeon6.jpg" class="image-popup img-opacity"><img src="images/campeon6.jpg" alt="Image" class="image-catalogue"></a>
+              <a href="{{premio.imageUrl}}" class="image-popup img-opacity"><img src="{{premio.imageUrl}}" alt="Image" class="image-catalogue"></a>
               <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Campeón Dos años menor y Reservado Gran Campeón</a></h3>
-                <strong class="price">Expo Prado 2018</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon8.jpg" class="image-popup img-opacity"><img src="images/campeon8.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Reservada Vaquillona Menor</a></h3>
-                <strong class="price">Expo Prado 2018</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon4.jpg" class="image-popup img-opacity"><img src="images/campeon4.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Campeón Junior</a></h3>
-                <strong class="price">Expo Prado 2018</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon1.jpg" class="image-popup img-opacity"><img src="images/campeon1.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Campeona Vaca Joven y Reservada</a></h3>
-                <strong class="price">Expo Durazno 2018</strong>
-              </div>
-            </div>
-          </div>
-           <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon9.jpg" class="image-popup img-opacity"><img src="images/campeon9.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Campeona Vaquillona Menor</a></h3>
-                <strong class="price">Expo Durazno 2018</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon2.jpg" class="image-popup img-opacity"><img src="images/campeon2.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Campeona Junior</a></h3>
-                <strong class="price">Expo Prado 2017</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon5.jpg" class="image-popup img-opacity"><img src="images/campeon5.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Tercer Mejor Ternero Menor</a></h3>
-                <strong class="price">Expo Prado 2017</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon7.jpg" class="image-popup img-opacity"><img src="images/campeon7.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Tercer Mejor Ternera Menor</a></h3>
-                <strong class="price">Expo Prado 2017</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="hotel-room text-center">
-              <a href="images/campeon3.jpg" class="image-popup img-opacity"><img src="images/campeon3.jpg" alt="Image" class="image-catalogue"></a>
-              <div class="hotel-room-body">
-                <h3 class="heading mb-0"><a href="#">Campeona Junior</a></h3>
-                <strong class="price">Expo Durazno 2017</strong>
+                <h3 class="heading mb-0">{{premio.name}}</h3>
+                <strong class="price">{{premio.place}} {{premio.year}}</strong>
               </div>
             </div>
           </div>
@@ -767,6 +697,9 @@
   <script src="js/mediaelement-and-player.min.js"></script>
 
   <script src="js/main.js"></script>
+
+  
+   
     
 
   <script>
