@@ -18,6 +18,11 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   color: #000; }
 
+.image-catalogue {
+    width: 291px;
+    height: 271px;
+    /*object-fit: cover;*/
+}
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
