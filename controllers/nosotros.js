@@ -193,14 +193,14 @@ app.controller('NosotrosController', function($scope,$location) {
   		{src:"images/Galeria/galeria1.jpg"}	];
 	$scope.ImagesGaleria = [
   		"images/Galeria/galeria1.jpg",
-  		"images/Galeria/galeria2.jpg",
-  		"images/Galeria/galeria3.jpg",
-  		"images/Galeria/galeria4.jpg",
-  		"images/Galeria/galeria5.jpg",
-  		"images/Galeria/galeria6.jpg",
-  		"images/Galeria/galeria7.jpg",
-  		"images/Galeria/galeria8.jpg",
-  		"images/Galeria/galeria9.jpg"  	];
+  		"images/Galeria/galeria2.JPG",
+  		"images/Galeria/galeria3.JPG",
+  		"images/Galeria/galeria4.JPG",
+  		"images/Galeria/galeria5.JPG",
+  		"images/Galeria/galeria6.JPG",
+  		"images/Galeria/galeria7.JPG",
+  		"images/Galeria/galeria8.JPG",
+  		"images/Galeria/galeria9.JPG"  	];
   $scope.init = function () {
 
    }
