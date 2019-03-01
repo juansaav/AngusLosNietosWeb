@@ -25,9 +25,11 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src = "js/angular-min.js"></script>
+    <script type="text/javascript" src = "controllers/contacto.js"></script>
     
   </head>
-  <body>
+  <body  ng-app = "myApp" ng-controller = "ContactoController">
   
   <div class="site-wrap">
 
@@ -110,13 +112,13 @@
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="fullname">Nombre completo</label>
+                  <label class="font-weight-bold" for="nameEmail">Nombre completo</label>
                   <input type="text" id="fullname" class="form-control" placeholder="Nombre completo">
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="font-weight-bold" for="email">Email</label>
+                  <label class="font-weight-bold" ng-model="emailEmail" for="email">Email</label>
                   <input type="email" id="email" class="form-control" placeholder="Email">
                 </div>
               </div>
@@ -124,14 +126,14 @@
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="phone">Telefono</label>
+                  <label class="font-weight-bold" ng-model="phoneEmail" for="phone">Telefono</label>
                   <input type="text" id="phone" class="form-control" placeholder="Telefono #">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="font-weight-bold" for="message">Mensaje</label> 
+                  <label class="font-weight-bold" ng-model="messageEmail" for="message">Mensaje</label> 
                   <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Escribe tu mensaje aqui"></textarea>
                 </div>
               </div>
@@ -168,7 +170,7 @@
         </div>
       </div>
     </div>
-     <footer style="max-height:  100px" class="site-footer">
+     <footer   class="site-footer">
         
         <div class="text-center">
           <div class="col-md-12">
