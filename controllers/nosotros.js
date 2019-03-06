@@ -111,67 +111,67 @@ app.controller('NosotrosController', function($scope,$location) {
 	}
   ];
   
-  $scope.torosPremio = [
+	$scope.torosPremio = [
   	{
   		id:1,
 		imageUrl : "images/campeon6.jpg",
-		name: "Campeón Dos años menor y Reservado Gran Campeón",
+		name: "RP52- Campeón Dos años menor y Reservado Gran Campeón",
 		place: "Expo Prado",
 		year: 2018
   	},
   	{
   		id:2,
 		imageUrl : "images/campeon8.jpg",
-		name: "Reservada Vaquillona Menor",
+		name: "RP51- Reservada Vaquillona Menor",
 		place: "Expo Prado",
 		year: 2018
   	},
   	{
   		id:3,
 		imageUrl : "images/campeon4.jpg",
-		name: "CCampeón Junior",
+		name: "RP98- Campeón Junior",
 		place: "Expo Prado",
 		year: 2018
   	},
   	{
   		id:4,
 		imageUrl : "images/campeon1.jpg",
-		name: "Campeona Vaca Joven y Reservada",
+		name: "RP670- Campeona Vaca Joven y Reservada",
 		place: "Expo Durazno",
 		year: 2018
   	},
   	{
   		id:5,
 		imageUrl : "images/campeon9.jpg",
-		name: "Campeona Vaquillona Menor",
+		name: "RP51- Campeona Vaquillona Menor",
 		place: "Expo Durazno",
 		year: 2018
   	},
   	{
   		id:6,
 		imageUrl : "images/campeon2.jpg",
-		name: "Campeona Junior",
+		name: "RP670- Campeona Junior",
 		place: "Expo Prado",
 		year: 2017
   	},
   	{
   		id:7,
 		imageUrl : "images/campeon5.jpg",
-		name: "Tercer Mejor Ternero Menor",
+		name: "RP52- Tercer Mejor Ternero Menor",
 		place: "Expo Prado",
 		year: 2017
   	},
   	{
   		id:8,
 		imageUrl : "images/campeon7.jpg",
-		name: "Tercer Mejor Ternera Menor",
+		name: "RP51- Tercer Mejor Ternera Menor",
 		place: "Expo Prado",
 		year: 2017
   	},
   	{
   		id:9,
 		imageUrl : "images/campeon3.jpg",
-		name: "Campeona Junior",
+		name: "RP670- Campeona Junior",
 		place: "Expo Durazno",
 		year: 2017
   	}	
