@@ -1,5 +1,5 @@
-var app = angular.module('myApp', []);
-app.controller('NovedadesController', function($scope,$location) {
+var app = angular.module('myApp', ['pascalprecht.translate']);
+app.controller('NovedadesController', function($scope,$location,$translate) {
   $scope.novedades = [
   	{
 		id:0,
@@ -46,7 +46,64 @@ app.controller('NovedadesController', function($scope,$location) {
 	  	element.classList.remove("js-site-navbar");
 	  	element.classList.add("scrolled");
     }
+    if (sessionStorage.lan != null){
+			$translate.use(sessionStorage.lan);
+			$scope.lan = sessionStorage.lan;
+  		};
    }
+   $scope.init();
+   $scope.lan = "es";		       
+    $scope.ChangeLanguage = function(){
+    	if ($scope.lan == "en"){
+			$scope.lan = "es";
+    	} else {
+    		$scope.lan = "en";
+    	}
+    	$translate.use($scope.lan);
+		sessionStorage.setItem("lan",$scope.lan);
+    }
+	
    $scope.init();
   
 });
+app.controller('AuxController', function($scope,$location,$translate) {
+  $scope.init = function () {
+  		if (sessionStorage.lan != null){
+			$translate.use(sessionStorage.lan);
+			$scope.lan = sessionStorage.lan;
+  		};
+   }; 
+   $scope.$on('someEvent', function(event, args) { $scope.init(); });
+   $scope.init();
+});
+app.config(['$translateProvider', function ($translateProvider) {
+  $translateProvider.translations('en', {
+    'Inicio': 'Home',
+    'Contacto': 'Contact us',
+    'Novedades': 'News',
+    'Nosotros': 'About us',
+    'Genetica': 'Genetics',
+    'Venta de semen': 'Sale of semen',
+    'Embriones': 'Embryos',
+    'Venta de reproductores': 'Sale of players',
+    'Venta de embriones': 'Sale of Embryos',
+    'Ver mas': 'See more',
+    
+  });
+ 
+  $translateProvider.translations('es', {
+    'Inicio': 'Inicio',
+    'Contacto': 'Contacto',
+    'Novedades': 'Novedades',
+    'Nosotros': 'Nosotros',
+    'Genetica': 'Genetica',
+    'Venta de semen': 'Venta de semen',
+    'Venta de embriones': 'Venta de embriones',
+    'Embriones': 'Embriones',
+    'Venta de reproductores': 'Venta de reproductores',
+    'Ver mas': 'Ver mas',
+
+   });
+ 
+  $translateProvider.preferredLanguage('es');
+}]);

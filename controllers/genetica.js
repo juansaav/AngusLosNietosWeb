@@ -1,6 +1,6 @@
 var app = angular.module('myApp',  ['pascalprecht.translate']);
-app.controller('TorosController', function($scope,$location,$translate) {
-	  $scope.init = function () {
+app.controller('GeneticaController', function($scope,$location,$translate,$window) {
+  $scope.init = function () {
   		if (sessionStorage.lan != null){
 			$translate.use(sessionStorage.lan);
 			$scope.lan = sessionStorage.lan;
@@ -16,198 +16,9 @@ app.controller('TorosController', function($scope,$location,$translate) {
     	$translate.use($scope.lan);
 		sessionStorage.setItem("lan",$scope.lan);
     }
-  $scope.torosGenetica = [
-	{
-		id:1,
-		imageUrl : "images/hero_1.jpg",
-		name: "Campeón 1",
-		type: "pedigree",
-		genetic_type: "semen",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:2,
-		imageUrl : "images/cabana11.jpg",
-		name: "Campeón 2",
-		type: "general",
-		genetic_type: "semen",
-		description: "1980",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:3,
-		imageUrl : "images/toro.jpg",
-		name: "Campeón 3",
-		type: "pedigree",
-		genetic_type: "semen",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"	
-	},
-	{
-		id:4,
-		imageUrl : "images/toro.jpg",
-		name: "Campeón 4",
-		type: "general",
-		genetic_type: "reproductor",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:5,
-		imageUrl : "images/toro11.jpg",
-		name: "Campeón 5",
-		type: "pedigree",
-		genetic_type: "reproductor",
-		description: "1980",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:6,
-		imageUrl : "images/toro.jpg",
-		name: "Campeón 6",
-		type: "general",
-		genetic_type: "reproductor",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"	
-	},	
-	{
-		id:7,
-		imageUrl : "images/toro.jpg",
-		name: "Campeón 7",
-		type: "pedigree",
-		genetic_type: "semen",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:8,
-		imageUrl : "images/toro11.jpg",
-		name: "Campeón 8",
-		type: "general",
-		genetic_type: "semen",
-		description: "1980",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:9,
-		imageUrl : "images/toro.jpg",
-		name: "Campeón 9",
-		type: "pedigree",
-		genetic_type: "semen",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"	
-	},
-	{
-		id:10,
-		imageUrl : "images/toro.jpg",
-		name: "Campeón 10",
-		type: "general",
-		genetic_type: "reproductor",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:11,
-		imageUrl : "images/toro11.jpg",
-		name: "Campeón 11",
-		type: "pedigree",
-		genetic_type: "reproductor",
-		description: "1980",
-		pdfUrl: "pdf/lorem-ipsum.pdf"
-	},
-	{
-		id:12,
-		imageUrl : "images/toro.jpg",
-		name: "Campeón 12",
-		type: "general",
-		genetic_type: "reproductor",
-		description: "1999",
-		pdfUrl: "pdf/lorem-ipsum.pdf"	
-	}
-  ];
-  
-  $scope.torosPremio = [
-  	{
-  		id:1,
-		imageUrl : "images/campeon6.jpg",
-		name: "RP52- Campeón Dos años menor y Reservado Gran Campeón",
-		place: "Expo Prado",
-		year: 2018
-  	},
-  	{
-  		id:2,
-		imageUrl : "images/campeon8.jpg",
-		name: "RP51- Reservada Vaquillona Menor",
-		place: "Expo Prado",
-		year: 2018
-  	},
-  	{
-  		id:3,
-		imageUrl : "images/campeon4.jpg",
-		name: "RP98- Campeón Junior",
-		place: "Expo Prado",
-		year: 2018
-  	},
-  	{
-  		id:4,
-		imageUrl : "images/campeon1.jpg",
-		name: "RP670- Campeona Vaca Joven y Reservada",
-		place: "Expo Durazno",
-		year: 2018
-  	},
-  	{
-  		id:5,
-		imageUrl : "images/campeon9.jpg",
-		name: "RP51- Campeona Vaquillona Menor",
-		place: "Expo Durazno",
-		year: 2018
-  	},
-  	{
-  		id:6,
-		imageUrl : "images/campeon2.jpg",
-		name: "RP670- Campeona Junior",
-		place: "Expo Prado",
-		year: 2017
-  	},
-  	{
-  		id:7,
-		imageUrl : "images/campeon5.jpg",
-		name: "RP52- Tercer Mejor Ternero Menor",
-		place: "Expo Prado",
-		year: 2017
-  	},
-  	{
-  		id:8,
-		imageUrl : "images/campeon7.jpg",
-		name: "RP51- Tercer Mejor Ternera Menor",
-		place: "Expo Prado",
-		year: 2017
-  	},
-  	{
-  		id:9,
-		imageUrl : "images/campeon3.jpg",
-		name: "RP670- Campeona Junior",
-		place: "Expo Durazno",
-		year: 2017
-  	}	
-
-  ];
-  	$scope.showGeneral = function (obj) {
-    	return obj.type === "general";
-	};
-	$scope.showPedigree = function (obj) {
-        return obj.type === "pedigree";
-    };
-    $scope.showSemen = function (obj) {
-        return obj.genetic_type === "semen";
-	};
-	$scope.showReproductor = function (obj) {
-        return obj.genetic_type === "reproductor";
-	};
-	$scope.init();
+	
+   $scope.init();
 });
-
 app.controller('AuxController', function($scope,$location,$translate) {
   $scope.init = function () {
   		if (sessionStorage.lan != null){
@@ -231,7 +42,6 @@ app.config(['$translateProvider', function ($translateProvider) {
     'Venta de reproductores': 'Sale of players',
     'Venta de embriones': 'Sale of Embryos',
     'Ver mas': 'See more',
-    'Abrir catálogo' : 'Open catalog',
 
     'Nombre completo': 'Full name',
     'Email': 'Email',
@@ -263,7 +73,6 @@ app.config(['$translateProvider', function ($translateProvider) {
     'Embriones': 'Embriones',
     'Venta de reproductores': 'Venta de reproductores',
     'Ver mas': 'Ver mas',
-    'Abrir catálogo' : 'Abrir catálogo',
 
     'Nombre completo': 'Nombre completo',
     'Email': 'Email',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app ="myApp"  ng-controller = "NosotrosController" ng-cloack>
   <head>
     <title>Angus &mdash; los nietos</title>
     <meta charset="utf-8">
@@ -27,10 +27,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/angular-min.js"></script>
-    <script src="controllers/nosotros.js"></script>
-    
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="controllers/nosotros.js"></script>    
   </head>
-  <body ng-app ="myApp"  ng-controller = "NosotrosController" >
+  <body  >
   
   <div class="site-wrap">
 
@@ -44,9 +44,9 @@
     </div> <!-- .site-mobile-menu -->
     
     
-<div class="site-navbar-wrap js-site-navbar bg-white" id="navBar">
+    <div class="site-navbar-wrap js-site-navbar bg-white" ng-controller="AuxController">
       
-      <div class="container">
+      <div class="container" >
         <div class="site-navbar bg-light">
           <div class="py-1">
             <div class="row align-items-center">
@@ -56,18 +56,19 @@
                     
                     <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li><a href="index.html">Inicio</a></li>
+                      <li >  <a href="index.html">{{ 'Inicio' | translate }}</a></li>
                       <li class="has-children">
-                        <a href="genetica.html">Genetica</a>
+                        <a href="genetica.html">{{ 'Genetica' | translate }}</a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="ventaSemen.html">Venta de semen</a></li>
-                          <li><a href="ventaEmbriones.html">Embriones</a></li>
-                          <li><a href="ventaReproductores.html">Venta de reproductores</a></li>
+                          <li><a href="ventaSemen.html">{{ 'Venta de semen' | translate }}</a></li>
+                          <li><a href="ventaEmbriones.html">{{ 'Embriones' | translate }}</a></li>
+                          <li><a href="ventaReproductores.html">{{ 'Venta de reproductores' | translate }}</a></li>
                         </ul>
                       </li>
-                      <li><a href="novedades.html">Novedades</a></li>
-                      <li class="active"><a href="nosotros.html">Nosotros</a></li>
-                      <li><a href="contacto.html">Contacto</a></li>
+                      <li><a href="novedades.html">{{ 'Novedades' | translate }}</a></li>
+                      <li class="active" ><a href="nosotros.html">{{ 'Nosotros' | translate }}</a></li>
+                      <li ><a href="contacto.html">{{ 'Contacto' | translate }}</a></li>
+                      <li ><a href="nosotros.html"  ><button  onclick="document.getElementById('ChangeLanguageButton').click();" style="opacity:0.7" class="btn btn-success" >EN / ES</button></a></li>
                     </ul>
                   </div>
                 </nav>
@@ -78,6 +79,7 @@
       </div>
     </div>
   
+  
     
      <div class="slide-one-item home-slider owl-carousel">
       
@@ -86,7 +88,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">  
               
-              <h1 class="mb-2">Nosotros</h1>
+              <h1 class="mb-2">{{ 'Nosotros' | translate }}</h1>
             </div>
           </div>
         </div>
@@ -97,7 +99,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
               
-              <h1 class="mb-2">Nosotros</h1>
+              <h1 class="mb-2">{{ 'Nosotros' | translate }}</h1>
             </div>
           </div>
         </div>
@@ -108,7 +110,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
               
-              <h1 class="mb-2">Nosotros</h1>
+              <h1 class="mb-2">{{ 'Nosotros' | translate }}</h1>
             </div>
           </div>
         </div>
@@ -136,18 +138,17 @@
             
 
             <div class="section-heading text-left">
-              <h2 class="mb-5">Historia</h2>
+              <h2 class="mb-5">{{ 'Historia' | translate }}</h2>
             </div>
-            <p class="mb-4">Nuestra empresa nace en el año 2014 con el objetivo de introducir nueva genética en los rodeos del Uruguay. Los animales son en su mayoría origen de embriones argentinos, producción de la prestigiosa cabaña Tres Marías de H. Gutiérrez. Con el correr de los años se han incorporado sangres americanas y se han comprado vientres conjuntos con cabañas muy reconocidas en el país como Bayucuá, Sierra Madera, La Santina, La Filomena y La Juanita de Wertel S.A.</p>
+            <p class="mb-4">{{ 'Nuestra empresa' | translate }}</p>
           </div>
         </div>
         <div class="row align-items-center ml-auto" style="padding-top: 20px">
-          <p>Nuestra primer participación fue en la Expo Durazno en el año 2016, donde concurrimos con una única vaquillona origen de Sierra Madera, obteniendo el premio a Campeona Junior y Tercer Mejor Hembra, grandes premios que nos marcaron que estábamos en el camino correcto de lo que buscan en la raza Aberdeen Angus en el Uruguay.</p>  
-          <p>Ese mismo año concurrimos a la mayor muestra ganadera del país, la Expo Prado, donde llevamos seis animales y obtuvimos seis premios, entre ellos Tercer Mejor Ternera Menor, Campeona Junior y Tercer Mejor Ternero Menor. En  sociedad con la cabaña Bayucuá y Tres Marías, nos consagramos con la Gran Campeona Angus en dicha competencia, a cuidado de la primera cabaña mencionada. Estos  logros nos llenaron de orgullo y nos presionaron a seguir mejorando.</p>
-          <p>En el año que corre participamos nuevamente en Expo Durazno obteniendo Campeona Vaquillona Menor, Campeona Vaca Joven y Reservada Gran Campeona, y Campeón Toro Dos Años Menor.</p>
-          <p>Por último, en la reciente Expo Prado alcanzamos nuestro mayor logro hasta el momento, el RP 52 se consagró Reservado Gran Campeón Angus, junto con el Campeón Junior y la Reservada Campeona Vaquillona Menor.</p>
-          <p class="mb-5">El objetivo principal de todo esto es, y seguirá siendo, ofrecer  genética que cause un impacto en la ganadería uruguaya, con el fin de producir carne de alta calidad y brindarle al criador toros funcionales que se adapten a nuestros rodeos de cría. Por el momento los ejemplares se comercializan en la propia cabaña o eventualmente en algún remate de la Raza, ejemplo Gala Angus. La idea es comenzar a hacer remates propios pero debido a que la cabaña se encuentra en pleno crecimiento no se han realizado aún.
-          </p>
+          <p>{{ 'Nuestra empresa1' | translate }}</p>  
+          <p>{{ 'Nuestra empresa2' | translate }}</p>
+          <p>{{ 'Nuestra empresa3' | translate }}</p>
+          <p>{{ 'Nuestra empresa4' | translate }}</p>
+          <p class="mb-5">{{ 'Nuestra empresa5' | translate }}</p>
         </div>
         <!--div class="row align-items-center mb-5">
           <div class="col-md-10 mb-5 mb-md-0">
@@ -165,7 +166,8 @@
         </div-->
       </div>
     </div>
-
+    <form style="visibility: hidden">
+                  <button id="ChangeLanguageButton" ng-show="false" onClick="window.location.reload()"   ng-click="ChangeLanguage()" ></button></form>
 
     <!-- <div class="site-section bg-light">
       <div class="container">
@@ -295,7 +297,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 mx-auto text-center mb-5 section-heading">
-            <h2 class="mb-5">Premios</h2>
+            <h2 class="mb-5">{{ 'Premios' | translate }}</h2>
           </div>
         </div>
         <div class="row">
@@ -332,7 +334,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 mx-auto text-center mb-5 section-heading">
-            <h2 class="mb-5">Galería</h2>
+            <h2 class="mb-5">{{ 'Galería' | translate }}</h2>
           </div>
         </div>
         <div class="row no-gutters"  >

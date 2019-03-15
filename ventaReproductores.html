@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" lang="en" lang="en" html  ng-app ="myApp"  ng-controller = "TorosController" ng-cloack>
   <head>
     <title>Angus &mdash; los nietos</title>
     <meta charset="utf-8">
@@ -26,10 +26,11 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/angular-min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script type="text/javascript" src = "controllers/toros.js"></script>
     
   </head>
-  <body ng-app = "myApp" ng-controller = "TorosController">
+  <body ng-app = "myApp" >
   
   <div class="site-wrap">
 
@@ -43,9 +44,9 @@
     </div> <!-- .site-mobile-menu -->
     
     
- <div class="site-navbar-wrap js-site-navbar bg-white">
+<div class="site-navbar-wrap js-site-navbar bg-white" ng-controller="AuxController">
       
-      <div class="container">
+      <div class="container" >
         <div class="site-navbar bg-light">
           <div class="py-1">
             <div class="row align-items-center">
@@ -55,18 +56,19 @@
                     
                     <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li><a href="index.html">Inicio</a></li>
-                      <li class="has-children active">
-                        <a href="genetica.html">Genetica</a>
+                      <li >  <a href="index.html">{{ 'Inicio' | translate }}</a></li>
+                      <li  class="has-children active">
+                        <a href="genetica.html">{{ 'Genetica' | translate }}</a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="ventaSemen.html">Venta de semen</a></li>
-                          <li><a href="ventaEmbriones.html">Embriones</a></li>
-                          <li class="active"><a href="ventaReproductores.html">Venta de reproductores</a></li>
+                          <li><a href="ventaSemen.html">{{ 'Venta de semen' | translate }}</a></li>
+                          <li><a href="ventaEmbriones.html">{{ 'Embriones' | translate }}</a></li>
+                          <li><a href="ventaReproductores.html">{{ 'Venta de reproductores' | translate }}</a></li>
                         </ul>
                       </li>
-                      <li><a href="novedades.html">Novedades</a></li>
-                      <li><a href="nosotros.html">Nosotros</a></li>
-                      <li><a href="contacto.html">Contacto</a></li>
+                      <li><a href="novedades.html">{{ 'Novedades' | translate }}</a></li>
+                      <li  ><a href="nosotros.html">{{ 'Nosotros' | translate }}</a></li>
+                      <li ><a href="contacto.html">{{ 'Contacto' | translate }}</a></li>
+                      <li ><a href="ventaReproductores.html"  ><button  onclick="document.getElementById('ChangeLanguageButton').click();" style="opacity:0.7" class="btn btn-success" >EN / ES</button></a></li>
                     </ul>
                   </div>
                 </nav>
@@ -86,7 +88,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">  
               
-              <h1 class="mb-2">Venta de reproductores</h1>
+              <h1 class="mb-2">{{ 'Venta de reproductores' | translate }}</h1>
             </div>
           </div>
         </div>
@@ -97,7 +99,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
               
-              <h1 class="mb-2">Venta de reproductores</h1>
+              <h1 class="mb-2">{{ 'Venta de reproductores' | translate }}</h1>
             </div>
           </div>
         </div>
@@ -108,7 +110,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
               
-              <h1 class="mb-2">Venta de reproductores</h1>
+              <h1 class="mb-2">{{ 'Venta de reproductores' | translate }}</h1>
             </div>
           </div>
         </div>
@@ -127,9 +129,9 @@
           </div>
           <div class="col-md-5 ml-auto">
             <div class="section-heading text-left">
-              <h2 class="mb-5">Venta de reproductores</h2>
+              <h2 class="mb-5">{{ 'Venta de reproductores' | translate }}</h2>
             </div>
-            <p class="mb-4"> Por ser una cabaña nueva apuntamos a la calidad de los toros, siendo todos estos de pedigrí, criados netamente a pasto pero llegando a los 2 años con una excelente aptitud reproductiva, listos para trabajar en cualquier sistema ganadero del país.</p>
+            <p class="mb-4"> {{ 'Venta de reproductores desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -138,7 +140,7 @@
 
     <div class="site-section bg-light" >
       <div class="container" >
-      <a href="pdf/catalogo_ventas.pdf" target="_blank">Abrir catálogo <span class="icon-arrow-right small" download></span></a>
+      <a href="pdf/catalogo_ventas.pdf" target="_blank">{{ 'Abrir catálogo' | translate }}  <span class="icon-arrow-right small" download></span></a>
         <embed src="pdf/catalogo_ventas.pdf" width="100%" height="500px" 
  type="application/pdf">
 
@@ -204,6 +206,8 @@
           
         </div>
     </footer>
+        <button id="ChangeLanguageButton" ng-show="false" onClick="window.location.reload()"   ng-click="ChangeLanguage()" ></button></form>
+ 
     
   </div>
 

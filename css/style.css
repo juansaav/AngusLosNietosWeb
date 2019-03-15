@@ -1,4 +1,9 @@
 /* Base */
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 body {
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.5);
