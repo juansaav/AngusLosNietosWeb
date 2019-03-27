@@ -39,17 +39,20 @@ app.controller('NovedadesController', function($scope,$location,$translate) {
 	expresion = /nov=(\d+)/;
 	novMatch = url.match(expresion)
     if (novMatch != null){
-		novId = novMatch[1];
+		  novId = novMatch[1];
     	$scope.showNovedad = true;
     	$scope.novedades = [$scope.novedades[novId]];
 	  	var element = document.getElementById("navBar");
 	  	element.classList.remove("js-site-navbar");
 	  	element.classList.add("scrolled");
+      document.body.style.height = "1450px";
+      window.scrollTo(0,14500);
+ 
     }
     if (sessionStorage.lan != null){
 			$translate.use(sessionStorage.lan);
 			$scope.lan = sessionStorage.lan;
-  		};
+		};
    }
    $scope.init();
    $scope.lan = "es";		       
