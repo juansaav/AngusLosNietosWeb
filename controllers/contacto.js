@@ -56,7 +56,7 @@ app.config(['$translateProvider', function ($translateProvider) {
     'Genetica': 'Genetics',
     'Venta de semen': 'Sale of semen',
     'Embriones': 'Embryos',
-    'Venta de reproductores': 'Sale of players',
+    'Venta de reproductores': 'Sale of bulls',
     'Nombre completo': 'Full name',
     'Email': 'Email',
     'Telefono': 'Phone',
